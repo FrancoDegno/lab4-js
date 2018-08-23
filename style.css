@@ -1,0 +1,23 @@
+.separador{
+    margin-top: 10px;
+    
+}
+.negro{
+   height: 30px;
+   background: black;
+}
+
+.grey{
+    background-image: -webkit-linear-gradient(top, grey, black);
+   
+}
+
+.cyan{
+    color: cyan;
+}
+
+.tam{
+    width: 300px;
+
+}
+

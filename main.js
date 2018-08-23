@@ -1,18 +1,38 @@
-var variableString= "hola mundo";
-var variableNumero = 22;
-var variableArray= [1,2,3];
 
-var variableObjeto = {
-    id:22,
-    nombre: "Alexis",
-    arrayNumeros:[
-        2,2,2
-    ]
+var num1,num2;
 
-
-}
-for(var i=0;i<variableArray.length;i++)
+function sum(nro1,nro2)
 {
-    console.log(variableArray[i]);
+    return (Number(nro1)+Number(nro2)).toString();
 }
+
+function mult(nro1,nro2)
+{
+    return (Number(nro1)*Number(nro2)).toString();
+}
+
+function div(nro1,nro2)
+{
+    return (Number(nro1)/Number(nro2)).toString();
+}
+
+function rest(nro1,nro2)
+{
+    return (Number(nro1)-Number(nro2)).toString();
+}
+
+function captureN(butinp)
+{
+    document.getElementById("textid").innerText+=butinp;
+}
+
+
+
+function captureOp()
+{
+
+}
+
+document.getElementById("1id").addEventListener("click",capture1,false);
+
 
