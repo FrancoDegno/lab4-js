@@ -19,71 +19,61 @@
 
 
    <div class="calculadora">
-       <div class ="visor">
+       
           
-
-       </div>
-       <div class ="contenedor-botones">
-
-
- 
-
-
-
-
+       
         <div class="container">
-          
-                
-                    
-                       
-                         <div class="jumbotron jumbotron-fluid tam text-center grey">
+            
+        <div class="jumbotron jumbotron-fluid tam text-center grey">
+                <div class="container">
 
-                            <div class="container">
 
+                                <div class ="visor">
                                     <div class="jumbotron negro">
                                             <div class="container">
-                                              <p class="cyan" id="textid"></p>
+                                              <p class="cyan text-left" id="textid"></p>
                                             </div>
-                                          </div>
+                                     </div>
+                               </div>
 
-                            <div class="btn-group-lg mr-2 separador" role="group" aria-label="First group">
+                        <div class ="contenedor-botones">
+
+                            <div class="btn-group-lg mr-2 separador text-left" role="group" aria-label="First group">
                                     <button id="7id" type="7" class="btn btn-primary" onclick="captureN(7)">7</button>
                                     <button id="8id" type="7" class="btn btn-primary" onclick="captureN(8)">8</button>
                                     <button id="9id" type="7" class="btn btn-primary"onclick="captureN(9)">9</button>
-                                    <button id="op+" type="7" class="btn btn btn-success">+</button>
+                                    <button id="op+" type="7" class="btn btn btn-success"onclick="captureOp('+')">+</button>
                                 </div>
 
-                                <div class="btn-group-lg mr-2 separador" role="group" aria-label="First group">
-                                        <button id="4id" type="7" class="btn btn-primary">4</button>
-                                        <button id="5id" type="7" class="btn btn-primary">5</button>
-                                        <button id="6id" type="7" class="btn btn-primary">6</button>
-                                        <button id="-id" type="7" class="btn btn-danger">-</button>
+                                <div class="btn-group-lg mr-2 separador text-left" role="group" aria-label="First group">
+                                        <button id="4id" type="7" class="btn btn-primary"onclick="captureN(4)">4</button>
+                                        <button id="5id" type="7" class="btn btn-primary"onclick="captureN(5)">5</button>
+                                        <button id="6id" type="7" class="btn btn-primary"onclick="captureN(6)">6</button>
+                                        <button id="-id" type="7" class="btn btn-danger"onclick="captureOp('-')">-</button>
                                 </div>
                                 
-                                <div class="btn-group-lg mr2 separador" role="group" aria-label="First group">
-                                        <button id="1id" type="7" class="btn btn-primary">1</button>
-                                        <button id="2id" type="7" class="btn btn-primary">2</button>
-                                        <button id="3id" type="7" class="btn btn-primary">3</button>
-                                        <button id="=id" type="7" class="btn btn-warning">=</button>
+                                <div class="btn-group-lg mr2 separador text-left" role="group" aria-label="First group">
+                                        <button id="1id" type="7" class="btn btn-primary"onclick="captureN(1)">1</button>
+                                        <button id="2id" type="7" class="btn btn-primary"onclick="captureN(2)">2</button>
+                                        <button id="3id" type="7" class="btn btn-primary"onclick="captureN(3)">3</button>
+                                        <button id="=id" type="7" class="btn btn-warning"onclick="result()">=</button>
                                 </div>
 
-                                <div class="btn-group-lg mr2 separador" role="group" aria-label="First group">
-                                        <button id="*id" type="7" class="btn btn-primary">*</button>
-                                        <button id="/id" type="7" class="btn btn-primary">/</button>
+                                <div class="btn-group-lg mr2 separador text-left" role="group" aria-label="First group">
+                                        <button id="1id" type="7" class="btn btn-primary"onclick="captureN(0)">0</button>
+                                        <button id="*id" type="7" class="btn btn-primary"onclick="captureOp('*')">*</button>
+                                        <button id="/id" type="7" class="btn btn-primary"onclick="captureOp('/')">/</button>
+                                        <button id="/id" type="7" class="btn btn-primary"onclick="captureOp('C')">CE</button>
                                 </div>
                             
                                    
                                 </div>  
                           
-                            </div>
+                        </div>
                        
                      
                  </div>
-
-       </div>
-
-
-   </div>
+        </div>
 
 
 
