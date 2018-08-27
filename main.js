@@ -1,6 +1,8 @@
 
 var num1,num2;
-var op1,op2;
+var op1,op2ç
+var hist= ["","","","",""];
+var indexh=0;
 
 function sum(nro1,nro2)
 {
@@ -47,18 +49,26 @@ function result()
     {   
         case "+":
         document.getElementById("textid").innerText=sum(num1,num2);
+        hist[indexh]=sum(num1,num2);
+        indexh++;
         op1=null;
         break;
         case "-":
         document.getElementById("textid").innerText=rest(num1,num2);
+        hist[indexh]=rest(num1,num2);
+        indexh++;
         op1=null;
         break;
         case "*":
         document.getElementById("textid").innerText=mult(num1,num2);
+        hist[indexh]=mult(num1,num2);
+        indexh++;
         op1=null;
         break;
         case "/":
         document.getElementById("textid").innerText=div(num1,num2);
+        hist[indexh]=div(num1,num2);
+        indexh++;
         op1=null;
         break;
 
@@ -68,6 +78,11 @@ function result()
 
 function clear()
 {
+    for(var i=0;i<hist.length;i++)
+    {
+       hist[i]="";
+    }
+    document.getElementById("myhist").innerText="";
     document.getElementById("textid").innerText="";
     num1=0;
     num2=0;
@@ -98,6 +113,23 @@ function captureOp(op)
 
 }
 
+function showHist()
+{
+    for(var i=0;i<hist.length;i++)
+    {
+        document.getElementById("myhist").innerText+= hist[i]+"\n";
+    }
+}
 
+function addComa()
+{
+    if(document.getElementById("textid").innerText.indexOf(",")==-1)
+    document.getElementById("textid").innerText+=".";
+}
+
+function delChar()
+{
+    document.getElementById("textid").innerText= document.getElementById("textid").innerText.substring(0,document.getElementById("textid").innerText.length-1);
+}
 
 
