@@ -1,7 +1,8 @@
 
 var num1,num2;
 var op1,op2ç
-var hist= ["","","","",""];
+var strHist="";
+var hist;
 var indexh=0;
 
 function sum(nro1,nro2)
@@ -49,26 +50,25 @@ function result()
     {   
         case "+":
         document.getElementById("textid").innerText=sum(num1,num2);
-        hist[indexh]=sum(num1,num2);
-        indexh++;
+        strHist+=num1+"+"+num2+"="+sum(num1,num2)+" ";
+    
         op1=null;
         break;
         case "-":
         document.getElementById("textid").innerText=rest(num1,num2);
-        hist[indexh]=rest(num1,num2);
-        indexh++;
+        strHist+=num1+"-"+num2+"="+rest(num1,num2)+" ";
+  
         op1=null;
         break;
         case "*":
         document.getElementById("textid").innerText=mult(num1,num2);
-        hist[indexh]=mult(num1,num2);
-        indexh++;
+        strHist+=num1+"*"+num2+"="+mult(num1,num2)+" ";
+  
         op1=null;
         break;
         case "/":
         document.getElementById("textid").innerText=div(num1,num2);
-        hist[indexh]=div(num1,num2);
-        indexh++;
+        strHist+=num1+"/"+num2+"="+div(num1,num2)+" ";
         op1=null;
         break;
 
@@ -82,6 +82,7 @@ function clear()
     {
        hist[i]="";
     }
+    strHist="";
     document.getElementById("myhist").innerText="";
     document.getElementById("textid").innerText="";
     num1=0;
@@ -115,9 +116,14 @@ function captureOp(op)
 
 function showHist()
 {
-    for(var i=0;i<hist.length;i++)
+    document.getElementById("myhist").innerText="";
+    hist=strHist.split(" ");
+    var istart=0;
+    if(hist.length-12>0)
+        istart=hist.length-12;
+    for(var i=istart;i<hist.length;i++)
     {
-        document.getElementById("myhist").innerText+= hist[i]+"\n";
+            document.getElementById("myhist").innerText+= hist[i]+"\n";
     }
 }
 
